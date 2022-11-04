@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="row  pt-3">
+        <div class="modal fade" id="ModalInstrucciones" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="BingoInstrucciones">Instrucciones del Bingo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Generador de Boletas:</h5>
+                    <p>
+                        Utiliza el boton de "JUGAR" para generar una balota aleatoria en el bingo
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Okay!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="col m-1 row">
+            <div class="row">
+                <div class="col col-md-1 offset-md-2 ContenedorBoton" id="BtnInfo">
+                     <a href="#" id="instrucciones" class="boton">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        INFO
+                    </a>
+                </div>
+                <div class="col col-4 contenidoAnimacion animate-bg pantalla">
+                    <div class="" id="pantalla"></div>
+                </div>
+                <div class="col col-lg-1 ContenedorBoton" class="">
+                    <a href="#" id="start" class="boton" onclick="GenerarAleatorio(50)">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        JUGAR
+                    </a>
+                </div>
+                <!-- Button trigger modal -->
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="BingoFinalizado">Bingo finalizado!</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Ya no hay más boletas
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Okay!</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                    onclick="ReiniciarBingo()">Reiniciar Bingo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row tablero">
+                <div class="col m-1 indicador  col-xl-2 " id="ind_letra_b">
+                    <div class="row">
+                        <div class="col-12 digito letra">B</div>
+                    </div>
+                </div>
+                <div class="col  indicador m-1  col-xl-2" id="ind_letra_i">
+                    <div class="row">
+                        <div class="col-12 digito letra">I</div>
+                    </div>
+                </div>
+                <div class="col indicador m-1  col-xl-2" id="ind_letra_n">
+                    <div class="row">
+                        <div class="col-12 digito letra">N</div>
+                    </div>
+                </div>
+                <div class="col  indicador m-1  col-xl-2" id="ind_letra_g">
+                    <div class="row">
+                        <div class="col-12 digito letra">G</div>
+                    </div>
+                </div>
+                <div class="col  indicador m-1  col-xl-2" id="ind_letra_o">
+                    <div class="row">
+                        <div class="col-12 digito letra">O</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+
+
+
+</body>
+
+</html>
